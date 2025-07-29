@@ -25,4 +25,8 @@ class StringCalculatorTest < Minitest::Test
   def test_newline_between_numbers
     assert_equal 6, @calculator.add("1\n2,3")
   end
+
+  def test_custom_delimiter
+    assert_equal 3, @calculator.add("//;\n1;2")
+  end
 end
